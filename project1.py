@@ -7,16 +7,16 @@ while True:
     print("====MENU====")
     print("1. Add Expense")
     print("2. View All Expenses")
-    print("3. View Total Khrcha")
+    print("3. View Total Amount")
     print("4. Exit")
 
     choice= int(input("Please Enter Your Choice : "))
 
 #ADD Expense
     if(choice == 1):
-        date= input("Kis date par khrcha kiya tha?: ")
-        category= input("Kis type ka khrcha kiya? (Food, Travel, Makeup, Books): ")
-        description= input("Aur detail dedo: ")
+        date= input("Enter Your Date: ")
+        category= input("Enter the Type (Food, Travel, Makeup, Books): ")
+        description= input("Enter Detail: ")
         amount= float(input("Enter the amount: "))
 
         expense= {
@@ -32,25 +32,25 @@ while True:
 # 2. VIEW ALL EXPENSES 
     elif(choice == 2):
         if( len(expensesList)==0 ):
-            print("No Expenses Added. Jao pehle khrcha karo. ")
+            print("No Expenses Added. Please Spend Money. ")
         else:
-           print("===== Ye y apka sara expense ======")
+           print("===== See ypur Expenses ======")
            count= 1
-           for eachKharcha in expensesList:
-                print(f"Kharcha Number {count} -> {eachKharcha["date"]}, {eachKharcha["category"]}, {eachKharcha["description"]}, {eachKharcha["amount"]} ")
+           for spendmoney in expensesList:
+                print(f"Expense Number {count} -> {spendmoney["date"]}, {spendmoney["category"]}, {spendmoney["description"]}, {spendmoney["amount"]} ")
                 count= count+1
 
 # 3. View TOtal Spending 
     elif(choice == 3):
         total= 0
-        for eachKrcha in expensesList:
-            total = total + eachKrcha["amount"]
+        for spendmoney in expensesList:
+            total = total + spendmoney["amount"]
 
-        print("\n TOTAL KHRCHA = ", total)
+        print("\n TOTAL Spend = ", total)
 
 #4. EXIT 
     elif(choice == 4):
-        print("Dhanyawad aaapne humara system use kiya")
+        print(" THANK YOU FOR USING EXPENSE TRACKER . GOOD BYE! ")
         break
 
     else:
