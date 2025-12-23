@@ -3,17 +3,17 @@
 import datetime
 import time
 
-name= input("well come h, enter your name : ")
+name= input("well come , Enter your Name : ")
 presentHour= datetime.datetime.now().hour
 
 if 5 <= presentHour <= 11: 
-    print("Good morning, ", name)
+    print("Good Morning, ", name)
 elif 11 <= presentHour <= 17:
-    print("Good afternoon, ", name)
+    print("Good Afternoon, ", name)
 elif 17 <= presentHour <= 20:
-    print("Good evening, ", name)
+    print("Good Evening, ", name)
 else:
-    print("Good night, ", name)
+    print("Good Night, ", name)
 
 
 
@@ -28,7 +28,7 @@ responses = {
     "who are you": "I am smart AI chatbot",
     "motivate me": "Keep going. Every bug of your project makes you a better developer",
     "happy": "Great to hear that",
-    "functions kya hote hai": "jakar chapter 7 padho"
+    "what are functions": "read chapter 7 "
 } 
 
 # Method/Function to get response of ChatBot 
@@ -39,7 +39,7 @@ def getResponseOfBot(userQuestion):
         if eachKey in userQuestion:
             return responses[eachKey]
 
-    return "I am not able to tell that yet. Mai jald hi ye sikh lunga"    
+    return "I am not able to tell that yet. I Understand it very soon."    
     
 
 # Take user input 
